@@ -1,8 +1,7 @@
 import React from 'react';
 import { Menu, X, BookOpen, ChevronRight, Instagram, Linkedin, Twitter, Mail } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
-import dsnluLogo from '../assets/DSNLU_Logo.png';
-import ccalLogo from '../assets/20953.png';
+import { dsnluLogo, ccalLogo } from '../assets/logos';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
@@ -31,29 +30,15 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full border-2 border-gold-500 bg-white overflow-hidden flex items-center justify-center p-0.5 shrink-0 shadow-md">
                   <img 
                     src={dsnluLogo} 
-                    onError={(e) => {
-                      const target = e.currentTarget;
-                      if (!target.src.endsWith('/DSNLU_Logo.png') && !target.src.endsWith('./DSNLU_Logo.png')) {
-                        target.src = './DSNLU_Logo.png';
-                      }
-                    }}
                     alt="DSNLU Logo" 
                     className="w-full h-full object-contain block" 
-                    loading="eager"
                   />
                 </div>
                 <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full border-2 border-gold-500 bg-black overflow-hidden flex items-center justify-center shrink-0 shadow-md">
                   <img 
                     src={ccalLogo} 
-                    onError={(e) => {
-                      const target = e.currentTarget;
-                      if (!target.src.endsWith('/20953.png') && !target.src.endsWith('./20953.png')) {
-                        target.src = './20953.png';
-                      }
-                    }}
                     alt="CCAL Logo" 
                     className="w-full h-full object-contain scale-[1.15] block" 
-                    loading="eager"
                   />
                 </div>
               </div>
@@ -122,29 +107,15 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   <div className="w-16 h-16 rounded-full border-2 border-gold-500 bg-white overflow-hidden flex items-center justify-center p-1.5 shrink-0 shadow-lg">
                     <img 
                       src={dsnluLogo} 
-                      onError={(e) => {
-                        const target = e.currentTarget;
-                        if (!target.src.endsWith('/DSNLU_Logo.png') && !target.src.endsWith('./DSNLU_Logo.png')) {
-                          target.src = './DSNLU_Logo.png';
-                        }
-                      }}
                       alt="DSNLU Logo" 
                       className="w-full h-full object-contain block" 
-                      loading="eager"
                     />
                   </div>
                   <div className="w-16 h-16 rounded-full border-2 border-gold-500 bg-black overflow-hidden flex items-center justify-center shrink-0 shadow-lg">
                     <img 
                       src={ccalLogo} 
-                      onError={(e) => {
-                        const target = e.currentTarget;
-                        if (!target.src.endsWith('/20953.png') && !target.src.endsWith('./20953.png')) {
-                          target.src = './20953.png';
-                        }
-                      }}
                       alt="CCAL Logo" 
                       className="w-full h-full object-contain scale-[1.15] block" 
-                      loading="eager"
                     />
                   </div>
                 </div>

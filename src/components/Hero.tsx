@@ -1,8 +1,7 @@
 import React from 'react';
 import { ArrowRight, ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import dsnluLogo from '../assets/DSNLU_Logo.png';
-import ccalLogo from '../assets/20953.png';
+import { dsnluLogo, ccalLogo } from '../assets/logos';
 
 export default function Hero() {
   return (
@@ -20,30 +19,16 @@ export default function Hero() {
           <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full border-2 border-gold-500 bg-white p-2 shadow-2xl flex items-center justify-center shrink-0">
             <img 
               src={dsnluLogo} 
-              onError={(e) => {
-                const target = e.currentTarget;
-                if (!target.src.endsWith('/DSNLU_Logo.png') && !target.src.endsWith('./DSNLU_Logo.png')) {
-                  target.src = './DSNLU_Logo.png';
-                }
-              }}
               alt="DSNLU Emblem" 
               className="w-full h-full object-contain block" 
-              loading="eager"
             />
           </div>
           <div className="h-12 w-[1px] bg-gold-500/40"></div>
           <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full border-2 border-gold-500 bg-black overflow-hidden shadow-2xl flex items-center justify-center shrink-0">
             <img 
               src={ccalLogo} 
-              onError={(e) => {
-                const target = e.currentTarget;
-                if (!target.src.endsWith('/20953.png') && !target.src.endsWith('./20953.png')) {
-                  target.src = './20953.png';
-                }
-              }}
               alt="CCAL Insignia" 
               className="w-full h-full object-contain scale-[1.15] block" 
-              loading="eager"
             />
           </div>
         </div>
