@@ -1,10 +1,12 @@
 import React from 'react';
 import { ArrowRight, ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import dsnluLogo from '../assets/DSNLU_Logo.png';
+import ccalLogo from '../assets/20953.png';
 
 export default function Hero() {
   return (
-    <section className="relative bg-maroon-900 text-ivory pt-24 pb-32 overflow-hidden">
+    <section className="relative bg-maroon-900 text-ivory pt-20 pb-32 overflow-hidden">
       {/* Decorative background elements */}
       <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-gold-500 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3"></div>
@@ -13,7 +15,40 @@ export default function Hero() {
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
         
-        <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full border border-gold-600/40 bg-maroon-800/50 mb-8">
+        {/* Prominent Emblem Display */}
+        <div className="flex items-center justify-center space-x-4 sm:space-x-6 mb-8">
+          <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full border-2 border-gold-500 bg-white p-2 shadow-2xl flex items-center justify-center shrink-0">
+            <img 
+              src={dsnluLogo} 
+              onError={(e) => {
+                const target = e.currentTarget;
+                if (!target.src.endsWith('/DSNLU_Logo.png') && !target.src.endsWith('./DSNLU_Logo.png')) {
+                  target.src = './DSNLU_Logo.png';
+                }
+              }}
+              alt="DSNLU Emblem" 
+              className="w-full h-full object-contain block" 
+              loading="eager"
+            />
+          </div>
+          <div className="h-12 w-[1px] bg-gold-500/40"></div>
+          <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full border-2 border-gold-500 bg-black overflow-hidden shadow-2xl flex items-center justify-center shrink-0">
+            <img 
+              src={ccalLogo} 
+              onError={(e) => {
+                const target = e.currentTarget;
+                if (!target.src.endsWith('/20953.png') && !target.src.endsWith('./20953.png')) {
+                  target.src = './20953.png';
+                }
+              }}
+              alt="CCAL Insignia" 
+              className="w-full h-full object-contain scale-[1.15] block" 
+              loading="eager"
+            />
+          </div>
+        </div>
+
+        <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full border border-gold-600/40 bg-maroon-800/50 mb-6 backdrop-blur-sm">
           <span className="w-2 h-2 rounded-full bg-gold-500 animate-pulse"></span>
           <span className="text-xs uppercase tracking-widest text-gold-500 font-semibold">Institutional Excellence</span>
         </div>

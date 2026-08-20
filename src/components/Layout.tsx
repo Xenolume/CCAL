@@ -26,18 +26,40 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             {/* Logo area */}
-            <Link to="/" className="flex items-center space-x-3 cursor-pointer group">
-              <div className="flex items-center space-x-2">
-                <div className="w-11 h-11 rounded-full border border-gold-500 bg-white overflow-hidden flex items-center justify-center p-0.5">
-                  <img src={dsnluLogo} alt="DSNLU Logo" className="w-full h-full object-contain" />
+            <Link to="/" className="flex items-center space-x-3 cursor-pointer group shrink-0">
+              <div className="flex items-center space-x-2 shrink-0">
+                <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full border-2 border-gold-500 bg-white overflow-hidden flex items-center justify-center p-0.5 shrink-0 shadow-md">
+                  <img 
+                    src={dsnluLogo} 
+                    onError={(e) => {
+                      const target = e.currentTarget;
+                      if (!target.src.endsWith('/DSNLU_Logo.png') && !target.src.endsWith('./DSNLU_Logo.png')) {
+                        target.src = './DSNLU_Logo.png';
+                      }
+                    }}
+                    alt="DSNLU Logo" 
+                    className="w-full h-full object-contain block" 
+                    loading="eager"
+                  />
                 </div>
-                <div className="w-11 h-11 rounded-full border border-gold-500 bg-black overflow-hidden flex items-center justify-center">
-                  <img src={ccalLogo} alt="CCAL Logo" className="w-full h-full object-contain scale-[1.15]" />
+                <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full border-2 border-gold-500 bg-black overflow-hidden flex items-center justify-center shrink-0 shadow-md">
+                  <img 
+                    src={ccalLogo} 
+                    onError={(e) => {
+                      const target = e.currentTarget;
+                      if (!target.src.endsWith('/20953.png') && !target.src.endsWith('./20953.png')) {
+                        target.src = './20953.png';
+                      }
+                    }}
+                    alt="CCAL Logo" 
+                    className="w-full h-full object-contain scale-[1.15] block" 
+                    loading="eager"
+                  />
                 </div>
               </div>
               <div className="flex flex-col">
-                <span className="font-serif font-bold text-xl tracking-wide text-gold-500 leading-tight group-hover:text-gold-400 transition-colors">CCAL</span>
-                <span className="text-xs uppercase tracking-widest text-ivory/80">DSNLU</span>
+                <span className="font-serif font-bold text-xl sm:text-2xl tracking-wide text-gold-500 leading-tight group-hover:text-gold-400 transition-colors">CCAL</span>
+                <span className="text-[10px] sm:text-xs uppercase tracking-widest text-ivory/80 font-medium">DSNLU</span>
               </div>
             </Link>
 
@@ -95,17 +117,40 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
             <div className="col-span-1 md:col-span-2">
-              <div className="flex items-center space-x-3 mb-6">
-                <div className="flex items-center space-x-2">
-                  <div className="w-16 h-16 rounded-full border border-gold-500 bg-white overflow-hidden flex items-center justify-center p-1">
-                    <img src={dsnluLogo} alt="DSNLU Logo" className="w-full h-full object-contain" />
+              <div className="flex items-center space-x-4 mb-6">
+                <div className="flex items-center space-x-3 shrink-0">
+                  <div className="w-16 h-16 rounded-full border-2 border-gold-500 bg-white overflow-hidden flex items-center justify-center p-1.5 shrink-0 shadow-lg">
+                    <img 
+                      src={dsnluLogo} 
+                      onError={(e) => {
+                        const target = e.currentTarget;
+                        if (!target.src.endsWith('/DSNLU_Logo.png') && !target.src.endsWith('./DSNLU_Logo.png')) {
+                          target.src = './DSNLU_Logo.png';
+                        }
+                      }}
+                      alt="DSNLU Logo" 
+                      className="w-full h-full object-contain block" 
+                      loading="eager"
+                    />
                   </div>
-                  <div className="w-16 h-16 rounded-full border border-gold-500 bg-black overflow-hidden flex items-center justify-center">
-                    <img src={ccalLogo} alt="CCAL Logo" className="w-full h-full object-contain scale-[1.15]" />
+                  <div className="w-16 h-16 rounded-full border-2 border-gold-500 bg-black overflow-hidden flex items-center justify-center shrink-0 shadow-lg">
+                    <img 
+                      src={ccalLogo} 
+                      onError={(e) => {
+                        const target = e.currentTarget;
+                        if (!target.src.endsWith('/20953.png') && !target.src.endsWith('./20953.png')) {
+                          target.src = './20953.png';
+                        }
+                      }}
+                      alt="CCAL Logo" 
+                      className="w-full h-full object-contain scale-[1.15] block" 
+                      loading="eager"
+                    />
                   </div>
                 </div>
                 <div className="flex flex-col">
-                  <span className="font-serif font-bold text-2xl text-gold-500">CCAL</span>
+                  <span className="font-serif font-bold text-2xl text-gold-500 leading-tight">CCAL</span>
+                  <span className="text-xs uppercase tracking-wider text-ivory/70 font-medium">DSNLU</span>
                 </div>
               </div>
               <h3 className="font-serif text-xl font-semibold mb-2">Centre for Competition and Antitrust Laws</h3>
