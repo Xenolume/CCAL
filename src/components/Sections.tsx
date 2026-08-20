@@ -19,34 +19,21 @@ export default function Sections() {
       
       {/* About Section */}
       <section id="about" className="py-20 md:py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          <div className="lg:col-span-5 relative">
-            <div className="aspect-[4/5] bg-maroon-800 rounded shadow-xl relative overflow-hidden">
-               <div className="absolute inset-0 border-4 border-gold-600/30 m-4 rounded"></div>
-               <div className="absolute inset-0 flex items-center justify-center p-8 text-center">
-                 <h3 className="font-serif text-3xl md:text-4xl text-gold-500 leading-tight">Excellence in <br/>Legal Scholarship</h3>
-               </div>
-            </div>
-            {/* Decorative block */}
-            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-cream -z-10 rounded"></div>
+        <div className="max-w-4xl mx-auto">
+          <div className="flex items-center space-x-4 mb-4">
+            <div className="h-px bg-gold-600 w-12"></div>
+            <span className="text-maroon-800 uppercase tracking-widest text-sm font-bold">About CCAL</span>
           </div>
-          
-          <div className="lg:col-span-7 lg:pl-10">
-            <div className="flex items-center space-x-4 mb-4">
-              <div className="h-px bg-gold-600 w-12"></div>
-              <span className="text-maroon-800 uppercase tracking-widest text-sm font-bold">About CCAL</span>
-            </div>
-            <h2 className="font-serif text-4xl md:text-5xl text-charcoal mb-8 leading-tight">
-              A premier institution dedicated to <span className="text-maroon-800 italic">antitrust scholarship</span> and policy.
-            </h2>
-            <div className="space-y-6 text-charcoal/80 text-lg leading-relaxed">
-              <p>
-                The Centre for Competition and Antitrust Laws (CCAL) at Damodaram Sanjivayya National Law University (DSNLU), Visakhapatnam, established in 2025, is dedicated to deepening academic and policy engagement with competition law, antitrust regulation, and the broader question of market fairness.
-              </p>
-              <p>
-                The Centre serves as a platform for students, academicians, and practitioners to critically examine the evolving intersection of law, markets, technology, and trade through research, dialogue, and action-oriented scholarship.
-              </p>
-            </div>
+          <h2 className="font-serif text-4xl md:text-5xl text-charcoal mb-8 leading-tight">
+            A premier institution dedicated to <span className="text-maroon-800 italic">antitrust scholarship</span> and policy.
+          </h2>
+          <div className="space-y-6 text-charcoal/80 text-lg leading-relaxed">
+            <p>
+              The Centre for Competition and Antitrust Laws (CCAL) at Damodaram Sanjivayya National Law University (DSNLU), Visakhapatnam, established in 2025, is dedicated to deepening academic and policy engagement with competition law, antitrust regulation, and the broader question of market fairness.
+            </p>
+            <p>
+              The Centre serves as a platform for students, academicians, and practitioners to critically examine the evolving intersection of law, markets, technology, and trade through research, dialogue, and action-oriented scholarship.
+            </p>
           </div>
         </div>
 
