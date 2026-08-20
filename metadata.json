@@ -1,0 +1,6 @@
+{
+  "name": "CCAL DSNLU Website",
+  "description": "Website for the Centre for Competition and Antitrust Laws at Damodaram Sanjivayya National Law University",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

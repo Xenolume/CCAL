@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+  --color-maroon-900: #4A0F16;
+  --color-maroon-800: #5A1118;
+  --color-gold-500: #C49A55;
+  --color-gold-600: #B88945;
+  --color-ivory: #F5EBDD;
+  --color-cream: #E8D8C0;
+  --color-charcoal: #211719;
+
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Lato", sans-serif;
+}
+
+body {
+  @apply font-sans bg-ivory text-charcoal antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-serif;
+}
+
