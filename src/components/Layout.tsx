@@ -1,6 +1,8 @@
 import React from 'react';
 import { Menu, X, BookOpen, ChevronRight, Instagram, Linkedin, Twitter, Mail } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
+import dsnluLogo from '../assets/DSNLU_Logo.png';
+import ccalLogo from '../assets/20953.png';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
@@ -27,10 +29,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <Link to="/" className="flex items-center space-x-3 cursor-pointer group">
               <div className="flex items-center space-x-2">
                 <div className="w-11 h-11 rounded-full border border-gold-500 bg-white overflow-hidden flex items-center justify-center p-0.5">
-                  <img src="./DSNLU_Logo.png" alt="DSNLU Logo" className="w-full h-full object-contain" />
+                  <img src={dsnluLogo} alt="DSNLU Logo" className="w-full h-full object-contain" />
                 </div>
                 <div className="w-11 h-11 rounded-full border border-gold-500 bg-black overflow-hidden flex items-center justify-center">
-                  <img src="./20953.png" alt="CCAL Logo" className="w-full h-full object-contain scale-[1.15]" />
+                  <img src={ccalLogo} alt="CCAL Logo" className="w-full h-full object-contain scale-[1.15]" />
                 </div>
               </div>
               <div className="flex flex-col">
@@ -96,10 +98,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <div className="flex items-center space-x-3 mb-6">
                 <div className="flex items-center space-x-2">
                   <div className="w-16 h-16 rounded-full border border-gold-500 bg-white overflow-hidden flex items-center justify-center p-1">
-                    <img src="./DSNLU_Logo.png" alt="DSNLU Logo" className="w-full h-full object-contain" />
+                    <img src={dsnluLogo} alt="DSNLU Logo" className="w-full h-full object-contain" />
                   </div>
                   <div className="w-16 h-16 rounded-full border border-gold-500 bg-black overflow-hidden flex items-center justify-center">
-                    <img src="./20953.png" alt="CCAL Logo" className="w-full h-full object-contain scale-[1.15]" />
+                    <img src={ccalLogo} alt="CCAL Logo" className="w-full h-full object-contain scale-[1.15]" />
                   </div>
                 </div>
                 <div className="flex flex-col">
